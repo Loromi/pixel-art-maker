@@ -1,5 +1,12 @@
 const table = document.getElementById('pixelCanvas');
 
+const submit = document.querySelector('#sizePicker').addEventListener('submit', function (createGrid) {
+    createGrid.preventDefault();
+    let gridHeight = document.getElementById('inputHeight').value;
+    let gridWidth = document.getElementById('inputWidth').value; 
+    makeGrid(gridWidth, gridHeight); 
+});
+
 function makeGrid(gridWidth, gridHeight) {
     for (let i=0; i<gridHeight; ++i) {
         let tRow = table.insertRow(-1);
