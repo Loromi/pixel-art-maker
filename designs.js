@@ -16,3 +16,10 @@ function makeGrid(gridWidth, gridHeight) {
         };
     }; 
 }
+
+table.addEventListener('mousedown', function (cell) {
+    let color = document.getElementById('colorPicker').value;
+    if (cell.target.nodeName === 'TD') {
+        cell.target.style.backgroundColor = color;
+    }
+});
