@@ -8,6 +8,7 @@ const submit = document.querySelector('#sizePicker').addEventListener('submit', 
 });
 
 function makeGrid(gridWidth, gridHeight) {
+    table.innerHTML = '';
     for (let i=0; i<gridHeight; ++i) {
         let tRow = table.insertRow(-1);
         for (let j=0; j<gridWidth; ++j) {
