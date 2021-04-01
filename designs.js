@@ -1,17 +1,21 @@
 const table = document.getElementById('pixelCanvas');
 
+const gridHeight = document.getElementById('inputHeight');
+
+const gridWidth = document.getElementById('inputWidth'); 
+
 const submit = document.querySelector('#sizePicker').addEventListener('submit', function (createGrid) {
     createGrid.preventDefault();
-    let gridHeight = document.getElementById('inputHeight').value;
-    let gridWidth = document.getElementById('inputWidth').value; 
-    makeGrid(gridWidth, gridHeight); 
+    let height = gridHeight.value;
+    let width = gridWidth.value;
+    makeGrid(width, height); 
 });
 
-function makeGrid(gridWidth, gridHeight) {
+function makeGrid(width, height) {
     table.innerHTML = '';
-    for (let i=0; i<gridHeight; ++i) {
+    for (let i=0; i<height; ++i) {
         let tRow = table.insertRow(-1);
-        for (let j=0; j<gridWidth; ++j) {
+        for (let j=0; j<width; ++j) {
             let tCol = tRow.insertCell(-1);
         };
     }; 
